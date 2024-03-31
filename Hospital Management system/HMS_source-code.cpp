@@ -967,3 +967,17 @@ pro:
         goto reChoice;
     }
 }
+void showDoctors(){
+    file.open("Doctor.csv",ios::in);
+    if(file.is_open())
+    {
+        system("cls");
+
+        cout<<"\t------Doctors--------\n";
+        while(getline(file,fileRead))
+        {
+            cout<<fileRead<<endl;
+        }
+        cout<<"\n=====================================\n";
+    }
+}
