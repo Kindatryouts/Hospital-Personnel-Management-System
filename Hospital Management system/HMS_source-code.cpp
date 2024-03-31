@@ -1036,3 +1036,17 @@ void showIT(){
             cout<<"\n=====================================\n";
         }
 }
+void showFinance(){
+    file.open("Finance.csv",ios::in);
+        if(file.is_open())
+        {
+            system("cls");
+
+            cout<<"\t------Finance--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+        }
+}
