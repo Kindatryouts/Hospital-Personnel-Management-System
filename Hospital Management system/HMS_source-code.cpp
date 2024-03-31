@@ -706,3 +706,264 @@ pro:
             else
                 goto C;
         }
+ else if (emp.id=="HO1234")// HO1234 id of head of Doctor and nurse
+        {
+            string option[4]={"Personal Information","Show employee","Show active employee","Home Page"};
+        CHO:
+        	cout<<"\n\t=====  Head of Doctor and Nurse Page  =====  \n";
+            for(short i=0;i<4;i++)
+            {
+                cout<<" Press "<<i+1<<" for : "<<option[i]<<endl;
+            }
+            cin>>choice;
+            if(choice==1)
+            {
+                system("cls");
+                personal_info(emp.id);
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+
+            else if(choice==2)
+            {
+                system("cls");
+                cout<<"\nShoww employee :"<<endl;
+                showDoctors();
+                showNurses();
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+
+            else if(choice==3)
+            {
+                system("cls");
+                cout<<"Show active workers  :"<<endl;
+                //showMD_ActiveEmployees();
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+            else if(choice==4)
+            {
+                system("cls");
+            	goto reChoice;
+			}
+            else
+               goto CHO;
+        }
+
+        else if (emp.id=="He1234")// HO1234 id of head of lab and pharma
+        {
+            string option[4]={"Personal Information","Show employee","Show active employee","Home Page"};
+        CHE:
+        	cout<<"\n\t===== head of Laboratorist's and Pharmacy Page  =====  \n";
+            for(short i=0;i<4;i++)
+            {
+                cout<<" Press "<<i+1<<" for : "<<option[i]<<endl;
+            }
+            cin>>choice;
+            if(choice==1)
+            {
+                system("cls");
+                personal_info(emp.id);
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+
+            else if(choice==2)
+            {
+                system("cls");
+                cout<<"\nShoww employee :"<<endl;
+                showLaboratorists();
+                showPharmacists();
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+
+            else if(choice==3)
+            {
+                system("cls");
+                cout<<"Show active workers  :"<<endl;
+                //showMD_ActiveEmployees();
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+            else if(choice==4)
+            {
+                system("cls");
+            	goto reChoice;
+			}
+            else
+                goto CHE;
+        }
+        else
+            goto idf;
+    }
+
+    else if (choice==2)
+    {
+      Emp:
+		system("cls");
+        cout<<"\n\t=====  Employee's Page  =====  "<<endl;
+        cout<<"Please Select your Profession : \n";
+        for(short i=0;i<8;i++)
+        {
+            cout<<" Press "<<i+1<<" for : "<<optionPro[i]<<endl;
+        }
+        cin>>choice;
+        if(choice==1)
+        {
+            system("cls");
+            cout<<"\n\t=====  Doctor Page  =====  "<<endl;
+            cout<<"Enter your Phone Number please : +251 ";
+            cin>>emp.phoneNum;
+            personal_info(emp.phoneNum);
+            cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+            cin>>check;
+            if(check=='y' || check=='Y')
+                goto Emp;
+            else
+                exit(0);
+        }
+        else if(choice==2)
+        {
+            system("cls");
+            cout<<"\n\t=====  Nurse Page  =====  "<<endl;
+            cout<<"Enter your Phone Number please : +251 ";
+            cin>>emp.phoneNum;
+            personal_info(emp.phoneNum);
+            cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+            cin>>check;
+            if(check=='y' || check=='Y')
+                goto Emp;
+            else
+                exit(0);
+        }
+        else if(choice==3)
+        {
+            system("cls");
+            cout<<"\n\t=====  Laboratorist Page  =====  "<<endl;
+            cout<<"Enter your Phone Number please : +251 ";
+            cin>>emp.phoneNum;
+            personal_info(emp.phoneNum);
+            cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+            cin>>check;
+            if(check=='y' || check=='Y')
+                goto Emp;
+            else
+                exit(0);
+        }
+        else if(choice==4)
+        {
+            system("cls");
+            cout<<"\n\t=====  Pharamacist Page  =====  "<<endl;
+            cout<<"Enter your Phone Number please : +251 ";
+            cin>>emp.phoneNum;
+            personal_info(emp.phoneNum);
+            cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+            cin>>check;
+            if(check=='y' || check=='Y')
+                goto Emp;
+            else
+                exit(0);
+        }
+        else if(choice==5)
+        {
+            system("cls");
+            cout<<"\n\t=====  IT Technician Page  =====  "<<endl;
+            cout<<"Enter your Phone Number please : +251 ";
+            cin>>emp.phoneNum;
+            personal_info(emp.phoneNum);
+            cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+            cin>>check;
+            if(check=='y' || check=='Y')
+                goto Emp;
+            else
+                exit(0);
+        }
+        else if(choice==6)
+        {
+            system("cls");
+            cout<<"\n\t=====  Finance Page  =====  "<<endl;
+            cout<<"Enter your Phone Number please : +251 ";
+            cin>>emp.phoneNum;
+            personal_info(emp.phoneNum);
+            cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+            cin>>check;
+            if(check=='y' || check=='Y')
+                goto Emp;
+            else
+                exit(0);
+        }
+        else if(choice==7)
+        {
+            system("cls");
+            cout<<"\n\t=====  Medical Assistant's Page  =====  "<<endl;
+            cout<<"Enter your Phone Number please : +251 ";
+            cin>>emp.phoneNum;
+            personal_info(emp.phoneNum);
+            cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+            cin>>check;
+            if(check=='y' || check=='Y')
+                goto Emp;
+            else
+                exit(0);
+        }
+        else if(choice==8)
+        {
+            system("cls");
+        	goto reChoice;
+		}
+        else
+        	goto Emp;
+    }
+
+    else if (choice==3)
+    {
+        cout<<"\n\t=====  Contact Us Page  =====  "<<endl;
+        file.open("contact_us.txt",ios::in);
+        if(file.is_open())
+        {
+            system("cls");
+
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            file.close();
+
+        }
+		checker();
+    }
+    else if(choice==4)
+    {
+        exit(0);
+    }
+    else
+    {
+        goto reChoice;
+    }
+}
