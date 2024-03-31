@@ -189,3 +189,17 @@ void addLab(){
         }
        countLab++;
 }
+void addPhar(){
+		if(countNur<6)
+        {
+            emp.profession=optionPro[3];
+            EmployeesInput();
+            file.open("Pharmacy.csv",ios::app);
+            if(file.is_open())
+            {
+                file<<emp.name<<","<<emp.gender<<","<<"+251"+emp.phoneNum<<","<<emp.age<<","<<emp.profession<<","<<emp.eduLevel<<","<<emp.salary<<endl;
+                file.close();
+            }
+        }
+       countPha++;
+}
