@@ -1,0 +1,7 @@
+Full Name -> Elsa Megersa
+Id -> HE1234
+Age -> 38
+Gender -> Female
+Phone Number -> +251 987651234
+Profession -> Head of Doctor and Nurse
+Performance -> 8.0

@@ -1,0 +1,7 @@
+Full Name -> Abebe Megersa
+Id -> GM1234
+Age -> 43
+Gender -> Male
+Phone Number -> +251 987651234
+Profession -> General Manager
+Performance -> 8.5

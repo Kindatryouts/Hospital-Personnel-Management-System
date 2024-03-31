@@ -1,0 +1,6 @@
+Full Name -> Ayele Tesfaye
+Id -> CE1234
+Age -> 49
+Gender -> Male
+Phone Number -> +251 987651234
+Profession -> CEO

@@ -1,0 +1,7 @@
+Full Name -> Feyesa Tolosa
+Id -> HE2345
+Age -> 44
+Gender -> Male
+Phone Number -> +251 966652345
+Profession -> Head of Laboratory and Pharmacy
+Performance -> 9.0
