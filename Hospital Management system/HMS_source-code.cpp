@@ -232,3 +232,17 @@ void addFin(){
         }
        countFin++;
 }
+void addAss(){
+		if(countAss<30)
+        {
+            emp.profession=optionPro[6];
+            EmployeesInput();
+            file.open("Medical Assistant.csv",ios::app);
+            if(file.is_open())
+            {
+                file<<emp.name<<","<<emp.gender<<","<<"+251"+emp.phoneNum<<","<<emp.age<<","<<emp.profession<<","<<emp.eduLevel<<","<<emp.salary<<endl;
+                file.close();
+            }
+        }
+       countAss++;
+}
