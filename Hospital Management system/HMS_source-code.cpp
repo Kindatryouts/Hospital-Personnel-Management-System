@@ -270,3 +270,143 @@ void personal_info(string x){
         cout<<"\n=====================================\n\n";
     }
 }
+void Display(){
+    int choice;
+
+reChoice:
+    system("cls");
+    cout<<"\t------------------------------------\n\t --------- Hospital-----------\n\t------------------------------------\n\n";
+    cout<<"Please enter your choice  \n";
+pro:
+    for(short i=0;i<4;i++)
+	{
+    	cout<<" Press "<<i+1<<" for : "<<optionPage[i]<<endl;
+	}
+    cin>>choice;
+
+    if(choice==1)
+    {
+    idf:
+        system("cls");
+        cout<<"\n\t=====  Managers Page  =====  "<<endl;
+        cout<<"Enter your ID please : ";
+        cin>>emp.id;
+
+        if(emp.id=="CE1234")// CE1234= ceo's id
+        {
+		C4:
+		    system("cls");
+			cout<<"\n\t=====  CEO's Page  =====  \n";
+            string option[7]={"Personal Information","Show employee","Show active employee",
+                                 "Show payroll", "Add employee","Terminate Employee","Go Back"};
+            string optionCEO[4]={"All employees","Medical employee's", "General employee's","Go Back"};
+
+            for(short i=0;i<7;i++)
+            {
+                cout<<" Press "<<i+1<<" for : "<<option[i]<<endl;
+            }
+            cin>>choice;
+
+        //Choice Personal information
+            if(choice==1)
+            {
+                personal_info(emp.id);
+
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C4;
+                else
+                    exit(0);
+            }
+
+        //Show all employees choice
+            else if (choice==2)
+            {
+            C1:
+            	system("cls");
+				cout<<"   Show Employees : "<<endl;
+                cout<<"In which profession to view employees ?"<<endl;
+                for(short i=0;i<9;i++)
+                {
+                    cout<<" Press "<<i+1<<" for : "<<optionAdd[i]<<endl;
+                }
+                cin>>choice;
+                if(choice ==1){
+                    showAllEmployee();
+                    cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto C1;
+                    else
+                        exit(0);
+                }
+                else if(choice ==2){
+                    showDoctors();
+                    cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto C1;
+                    else
+                        exit(0);
+                }
+                else if(choice ==3){
+                    showNurses();
+                    cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto C1;
+                    else
+                        exit(0);
+                }
+                else if(choice ==4){
+                    showLaboratorists();
+                    cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto C1;
+                    else
+                        exit(0);
+                }
+                else if(choice ==5){
+                    showPharmacists();
+                    cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto C1;
+                    else
+                        exit(0);
+                }
+                else if(choice ==6){
+                    showIT();
+                    cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto C1;
+                    else
+                        exit(0);
+                }
+                else if(choice ==7){
+                    showFinance();
+                    cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto C1;
+                    else
+                        exit(0);
+                }
+                else if(choice ==8){
+                    showAssistants();
+                    cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto C1;
+                    else
+                        exit(0);
+                }
+                else if(choice ==9){
+                        goto reChoice;
+                }
+                else
+                    goto C1;
+            }
