@@ -1050,3 +1050,17 @@ void showFinance(){
             cout<<"\n=====================================\n";
         }
 }
+void showAssistants(){
+    file.open("Medical Assistant.csv",ios::in);
+        if(file.is_open())
+        {
+            system("cls");
+
+            cout<<"\t------Medical Assistants--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+        }
+}
