@@ -410,3 +410,141 @@ pro:
                 else
                     goto C1;
             }
+       //Active employee choice
+            else if (choice==3)
+            {
+            C2:
+            	system("cls");
+				cout<<option[choice-1]<<" data for : "<<endl;
+                for(short i=0;i<4;i++)
+                {
+                    cout<<" Press "<<i+1<<" for : "<<optionCEO[i]<<endl;
+                }
+                cin>>choice;
+                if (choice==1)
+                {
+                    system("cls");
+                    cout<<" All Active EMployees are : "<<endl;
+                    //showActiveEmployee();
+
+                    checker();
+                }
+                else if (choice==2)
+                {
+                    system("cls");
+                    cout<<" Active Medical EMployees are : "<<endl;
+                    //showMD_ActiveEmployees();
+
+                    checker();
+                }
+                else if (choice==3)
+                {
+                    system("cls");
+                    cout<<" Active general managers departmenet Employees data is : "<<endl;
+                    //showGM_ActiveEmployees();
+
+                   checker();
+                }
+                else if(choice==4)
+	            {
+	                system("cls");
+	            	goto C4;
+				}
+                else
+                {
+                    cout<<"Please enter valid number : "  ;
+                    goto C2;
+                }
+            }
+
+        //choice show payroll
+            else if(choice==4)
+            {
+                system("cls");
+                cout<<"Payroll informations :"<<endl;
+                //cout<< payroll();
+
+                checker();
+            }
+
+        //choice add employee
+            else if(choice==5)
+            {
+           Cc4:
+                system("cls");
+                cout<<"Adding new employee :"<<endl;
+                cout<<"In which profession to enroll ?"<<endl;
+                for(short i=0;i<8;i++)
+                {
+                    cout<<" Press "<<i+1<<" for : "<<optionPro[i]<<endl;
+                }
+                cin>>choice;
+                if (choice==1){
+                    addDoctor();
+                    cout<<"\nPress 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto Cc4;
+                    else
+                        exit(0);
+                }
+                else if(choice==2){
+                    addNurse();
+                    cout<<"\nPress 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto Cc4;
+                    else
+                        exit(0);
+                }
+                else if(choice==3){
+                    addLab();
+                    cout<<"\nPress 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto Cc4;
+                    else
+                        exit(0);
+                }
+                else if(choice==4){
+                    addPhar();
+                    cout<<"\nPress 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto Cc4;
+                    else
+                        exit(0);
+                }
+                else if(choice==5){
+                    addIt();
+                    cout<<"\nPress 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto Cc4;
+                    else
+                        exit(0);
+                }
+                else if(choice==6){
+                    addFin();
+                    cout<<"\nPress 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto Cc4;
+                    else
+                        exit(0);
+                }
+                else if(choice==7){
+                    addAss();
+                    cout<<"\nPress 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto Cc4;
+                    else
+                        exit(0);
+                }
+                else if(choice==8){
+                        goto C4;
+                }
+                else
+                    goto Cc4;
+            }
