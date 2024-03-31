@@ -175,3 +175,17 @@ void addNurse(){
         }
        countNur++;
 }
+void addLab(){
+		if(countNur<6)
+        {
+            emp.profession=optionPro[2];
+            EmployeesInput();
+            file.open("Laboratory.csv",ios::app);
+            if(file.is_open())
+            {
+                file<<emp.name<<","<<emp.gender<<","<<"+251"+emp.phoneNum<<","<<emp.age<<","<<emp.profession<<","<<emp.eduLevel<<","<<emp.salary<<endl;
+                file.close();
+            }
+        }
+       countLab++;
+}
