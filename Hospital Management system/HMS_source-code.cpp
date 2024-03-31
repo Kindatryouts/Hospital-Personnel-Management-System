@@ -109,4 +109,55 @@ void EmployeesInput(){
 					file.close();
 				}
 }
+void addDoctor(){
+    system("cls");
+    cout<<"Adding A Doctor \n";
+        if(countDoc<12)
+            {
+                cout<<"\nEnter full name : ";
+                cin>>emp.name;
+                cout<<"Enter your Age :";
+                cin>>emp.age;
+                emp.profession = "Doctor";
+          Gen:
+                cout<<"Gender : \n Press 1 for Male \n Press 2 for Female\n";
+                cin>>choice;
+                if(choice==1)
+                    emp.gender="Male";
+                else if (choice==2)
+                    emp.gender="Female";
+                else
+                    goto Gen;
+            PN1:
+                cout<<"\nEnter your phone number (+251 : ) ";
+                cin>>emp.phoneNum;
+                if(emp.phoneNum.length() != 9){
+                    cout<<"\n  Please enter valid number ";
+                    goto PN1;
+                }
+            EDU1:
+                string optionDoc[3]={"Specialist","Resident","GP"};
 
+
+                for(short i=0;i<3;i++)
+                {
+                    cout<<" Press "<<i+1<<" for : "<<optionDoc[i]<<endl;
+                }
+                cin>>choice;
+                if(choice<=0 && choice>3){
+                    cout<<"Please enter valid number : ";
+                    goto EDU1;
+                }
+                emp.eduLevel=optionDoc[choice-1];
+                //setID();
+            	file.open("Doctor.csv",ios::app);
+				if(file.is_open())
+				{
+					file<<emp.name<<","<<emp.gender<<","<<"+251"+emp.phoneNum<<","<<emp.age<<","<<emp.profession<<","<<emp.eduLevel<<","<<emp.salary<<endl;
+
+					file.close();
+
+				}
+            }
+            countDoc++;
+}
