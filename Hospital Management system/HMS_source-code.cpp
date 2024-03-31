@@ -1124,3 +1124,17 @@ void showAllEmployee(){
             cout<<"\n=====================================\n";
 
 }
+void Terminate_employee(){
+    file.open("C:/Users/25193/Desktop/DS project/",ios::in);
+    if(file.is_open()){
+                    int status;
+                    char fileName[20];
+					cout<<"enter Phone number: (plus .txt)";
+					cin>>fileName;
+					status = remove(fileName);
+                    if (status==0)
+                        cout<<"file deleted"<<endl;
+                    else
+                        cout<<"error";
+}
+}
