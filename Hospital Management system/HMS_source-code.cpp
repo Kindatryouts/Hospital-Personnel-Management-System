@@ -994,3 +994,17 @@ void showNurses(){
         cout<<"\n=====================================\n";
     }
 }
+void showLaboratorists(){
+    file.open("Laboratory.csv",ios::in);
+    if(file.is_open())
+    {
+        system("cls");
+
+        cout<<"\t------Laboratorist's--------\n";
+        while(getline(file,fileRead))
+        {
+            cout<<fileRead<<endl;
+        }
+        cout<<"\n=====================================\n";
+    }
+}
