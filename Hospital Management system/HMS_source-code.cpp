@@ -548,3 +548,161 @@ pro:
                 else
                     goto Cc4;
             }
+ if(choice==6)
+            {
+                system("cls");
+                cout<<"Terminating employee :"<<endl;
+                Terminate_employee();
+
+                 cout<<"\nPress 'Y' to Go Back or Press any key to exit : ";
+                    cin>>check;
+                    if(check=='y' || check=='Y')
+                        goto C4;
+                    else
+                        exit(0);
+            }
+			else if(choice==7)
+            {
+                system("cls");
+                goto reChoice;
+			}
+            else
+            {
+                goto C4;
+            }
+
+        }
+
+        else if (emp.id=="MD1234")// MD1234 id of medical diector
+         {
+            string optionM[4]={"Personal Information","Show employee","Show active employee","Home Page"};
+        Cm:
+        	system("cls");
+        	cout<<"\n\t=====  Medical Director's Page  =====  \n";
+            for(short i=0;i<4;i++)
+                {
+                    cout<<" Press "<<i+1<<" for : "<<optionM[i]<<endl;
+                }
+                cin>>choice;
+            if(choice==1)
+            {
+                system("cls");
+                personal_info(emp.id);
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto Cm;
+                else
+                    exit(0);
+            }
+
+            else if(choice==2)
+            {
+                system("cls");
+                cout<<"\nShoww employee :"<<endl;
+                showDoctors();
+                showNurses();
+                showLaboratorists();
+                showPharmacists();
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto Cm;
+                else
+                    exit(0);
+            }
+
+            else if(choice==3)
+            {
+                system("cls");
+                cout<<"Show active workers  :"<<endl;
+                //showMD_ActiveEmployees();
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto Cm;
+                else
+                    exit(0);
+            }
+            else if(choice==4)
+            {
+                system("cls");
+                goto reChoice;
+            }
+            else
+            {
+                goto Cm;
+            }
+        }
+
+        else if (emp.id=="GM1234")// GM1234 id of General Manager
+        {
+        C:
+            string option[5]={"Personal Information","Show employee","Show active employee","Show payroll","Home Page"};
+
+			cout<<"\n\t=====  General manager's Page  =====  \n";
+            for(int i=0;i<5;i++)
+                {
+                    cout<<" Press "<<i+1<<" for : "<<option[i]<<endl;
+                }
+            cin>>choice;
+
+            if(choice==1)
+            {
+                system("cls");
+                personal_info(emp.id);
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+
+            else if(choice==2)
+            {
+                system("cls");
+                cout<<"\nShoww employee :"<<endl;
+                showIT();
+                showFinance();
+                showAssistants();
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+
+            else if(choice==3)
+            {
+                system("cls");
+                cout<<"Show active workers  :"<<endl;
+            // showMD_ActiveEmployees();
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+            else if(choice==4)
+            {
+                system("cls");
+                cout<<"PAyroll informations :"<<endl;
+                //Payroll();
+                cout<<"Press 'Y' to Go Back or Press any key to exit : ";
+                cin>>check;
+                if(check=='y' || check=='Y')
+                    goto C;
+                else
+                    exit(0);
+            }
+			else if(choice==5)
+            {
+                system("cls");
+            	goto reChoice;
+			}
+            else
+                goto C;
+        }
