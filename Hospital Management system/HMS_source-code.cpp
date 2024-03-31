@@ -981,3 +981,16 @@ void showDoctors(){
         cout<<"\n=====================================\n";
     }
 }
+void showNurses(){
+    file.open("Nurse.csv",ios::in);
+    if(file.is_open())
+    {
+        system("cls");
+        cout<<"\t------Nurse's--------\n";
+        while(getline(file,fileRead))
+        {
+            cout<<fileRead<<endl;
+        }
+        cout<<"\n=====================================\n";
+    }
+}
