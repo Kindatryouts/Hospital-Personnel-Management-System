@@ -1064,3 +1064,63 @@ void showAssistants(){
             cout<<"\n=====================================\n";
         }
 }
+void showAllEmployee(){
+
+    system("cls");
+        file.open("Doctor.csv",ios::in);
+            cout<<"\t------Doctors--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+
+        file.open("Nurse.csv",ios::in);
+            cout<<"\t------Nurse's--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+
+        file.open("Laboratory.csv",ios::in);
+            cout<<"\t------Laboratorist's--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+
+        file.open("Pharmacy.csv",ios::in);
+            cout<<"\t------Pharmacist's--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+
+        file.open("IT.csv",ios::in);
+            cout<<"\t------IT Technicians--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+
+        file.open("Finance.csv",ios::in);
+            cout<<"\t------Finance--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+
+        file.open("Medical Assistant.csv",ios::in);
+            cout<<"\t------Medical Assistants--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+
+}
