@@ -246,3 +246,12 @@ void addAss(){
         }
        countAss++;
 }
+void checker(){
+    cout<<" \n  Press 'Y' to Go to Home Page  or  press any key to exit : ";
+    cin>>check;
+    if(check=='Y' || check=='y')
+    	Display();
+    else
+    	exit(0);
+
+}
