@@ -1022,3 +1022,17 @@ void showPharmacists(){
             cout<<"\n=====================================\n";
         }
 }
+void showIT(){
+     file.open("IT.csv",ios::in);
+        if(file.is_open())
+        {
+            system("cls");
+
+            cout<<"\t------IT Technicians--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+        }
+}
