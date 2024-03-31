@@ -1008,3 +1008,17 @@ void showLaboratorists(){
         cout<<"\n=====================================\n";
     }
 }
+void showPharmacists(){
+    file.open("Pharmacy.csv",ios::in);
+        if(file.is_open())
+        {
+            system("cls");
+
+            cout<<"\t------Pharmacist's--------\n";
+            while(getline(file,fileRead))
+            {
+                cout<<fileRead<<endl;
+            }
+            cout<<"\n=====================================\n";
+        }
+}
