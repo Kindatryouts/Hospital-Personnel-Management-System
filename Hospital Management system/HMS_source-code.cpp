@@ -25,3 +25,35 @@ struct employee{
 
 };
 
+int countDoc,countNur,countLab,countPha,countIt,countFin,countAss,countAll;
+fstream file;
+string fileRead;
+string optionEdu[4]={"PHD","Masters","Degree","Diploma"};
+string optionAdd[9]={"All","Doctor","Nurse", "Labratorist","Pharmacist", "It Technician", "Finance", "Medical Assistant","Go Back"};
+string optionPage[4]={"Manager page","Employee page","Contact us","Exit"};
+string optionPro[8]={"Doctor","Nurse","Laboratorist","Pharmacist","IT Technician","Finance","Assistant","Go back"};
+int choice;
+char check;
+employee emp;
+
+void setID();
+void Display();
+void addEmployee();
+void showAllEmployee();
+void showDoctors();
+void showNurses();
+void showLaboratorists();
+void showPharmacists();
+void showIT();
+void showFinance();
+void showAssistants();
+void addDoctor();
+void addNurse();
+void addLab();
+void addPhar();
+void addIt();
+void addFin();
+void addAss();
+void Terminate_employee();
+
+
