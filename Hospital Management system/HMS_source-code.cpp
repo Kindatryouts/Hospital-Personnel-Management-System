@@ -56,4 +56,8 @@ void addFin();
 void addAss();
 void Terminate_employee();
 
+void setID(){
+      emp.id=emp.profession[0]+emp.profession[1]+emp.phoneNum[5]+emp.phoneNum[6]+emp.phoneNum[7]+emp.phoneNum[8];
+}
+
 
