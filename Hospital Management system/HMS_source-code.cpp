@@ -60,4 +60,53 @@ void setID(){
       emp.id=emp.profession[0]+emp.profession[1]+emp.phoneNum[5]+emp.phoneNum[6]+emp.phoneNum[7]+emp.phoneNum[8];
 }
 
+void EmployeesInput(){
+                system("cls");
+                cout<<"Adding" <<optionPro[choice-1]<<endl;
+                cout<<"\nEnter your full name : ";
+                cin>>emp.name;
+                cout<<"Enter your Age :";
+                cin>>emp.age;
+            Gen:
+                cout<<"Gender : \n Press 1 for Male \n Press 2 for Female\n";
+                cin>>choice;
+                if(choice==1)
+                    emp.gender="Male";
+                else if (choice==2)
+                    emp.gender="Female";
+                else
+                    goto Gen;
+            PN1:
+                cout<<"Enter your phone number (+251 : ) ";
+                cin>>emp.phoneNum;
+                if(emp.phoneNum.length() != 9){
+                    cout<<"\n  Please enter valid number ";
+                    goto PN1;
+                    }
+            EDU1:
+
+                for(short i=0;i<4;i++)
+                {
+                    cout<<" Press "<<i+1<<" for : "<<optionEdu[i]<<endl;
+                }
+                cin>>choice;
+                if(choice<=0 && choice>4){
+                    cout<<"Please enter valid number : ";
+                    goto EDU1;
+                }
+                emp.eduLevel=optionPro[choice-1];
+                file.open(emp.phoneNum+".txt",ios::out);
+				if(file.is_open())
+				{
+				    file<<"Profession -> "<<emp.profession<<endl;
+					file<<"Full name -> "<<emp.name<<endl;
+                    file<<"Gender - > "<<emp.gender<<endl;
+					file<<"Phone number -> +251"+emp.phoneNum<<endl;
+					file<<"Profession -> "<<emp.profession<<endl;
+					file<<"Education Level -> "<<emp.eduLevel<<endl;
+					file<<"Salary -> "<<emp.salary;
+
+					file.close();
+				}
+}
 
