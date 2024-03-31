@@ -161,3 +161,17 @@ void addDoctor(){
             }
             countDoc++;
 }
+void addNurse(){
+		if(countNur<24)
+        {
+            emp.profession=optionPro[1];
+            EmployeesInput();
+            file.open("Nurse.csv",ios::app);
+            if(file.is_open())
+            {
+                file<<emp.name<<","<<emp.gender<<","<<"+251"+emp.phoneNum<<","<<emp.age<<","<<emp.profession<<","<<emp.eduLevel<<","<<emp.salary<<endl;
+                file.close();
+            }
+        }
+       countNur++;
+}
