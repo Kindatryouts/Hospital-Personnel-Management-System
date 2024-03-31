@@ -255,3 +255,18 @@ void checker(){
     	exit(0);
 
 }
+void personal_info(string x){
+    cout<<"\n\t=====  Your Personal informations  =====  "<<endl;
+    file.open(x+".txt",ios::in);
+    if(file.is_open())
+    {
+        system("cls");
+
+        while(getline(file,fileRead))
+        {
+            cout<<fileRead<<endl;
+        }
+        file.close();
+        cout<<"\n=====================================\n\n";
+    }
+}
