@@ -203,3 +203,32 @@ void addPhar(){
         }
        countPha++;
 }
+void addIt(){
+		if(countNur<3)
+        {
+            emp.profession=optionPro[4];
+            EmployeesInput();
+            file.open("IT.csv",ios::app);
+            if(file.is_open())
+            {
+                file<<emp.name<<","<<emp.gender<<","<<"+251"+emp.phoneNum<<","<<emp.age<<","<<emp.profession<<","<<emp.eduLevel<<","<<emp.salary<<endl;
+                file.close();
+            }
+        }
+       countIt++;
+}
+
+void addFin(){
+		if(countNur<3)
+        {
+            emp.profession=optionPro[5];
+            EmployeesInput();
+            file.open("Finance.csv",ios::app);
+            if(file.is_open())
+            {
+                file<<emp.name<<","<<emp.gender<<","<<"+251"+emp.phoneNum<<","<<emp.age<<","<<emp.profession<<","<<emp.eduLevel<<","<<emp.salary<<endl;
+                file.close();
+            }
+        }
+       countFin++;
+}
