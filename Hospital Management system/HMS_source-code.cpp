@@ -25,6 +25,12 @@ struct employee{
 
 };
 
+int main ()
+{
+	system("color F1");
+    Display();
+}
+
 int countDoc,countNur,countLab,countPha,countIt,countFin,countAss,countAll;
 fstream file;
 string fileRead;
